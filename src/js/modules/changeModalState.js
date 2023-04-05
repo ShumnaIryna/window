@@ -16,7 +16,6 @@ const changeModalState = (state) => {
                 switch(item.nodeName) {
                     case 'SPAN' :
                         state[prop] = i;
-                        //console.log('span');
                         break;
                     case 'INPUT' :
                         if (item.getAttribute('type') === 'checkbox') {
@@ -27,15 +26,13 @@ const changeModalState = (state) => {
                                     box.checked = true;
                                 }
                             })
-                            //console.log('checkbox');
+                           
                         } else {
                             state[prop] = item.value;
-                            //console.log('input');
                         }
                         break;
                     case 'SELECT' :
                         state[prop] = item.value;
-                        //console.log('select');
                         break;
                 }
                

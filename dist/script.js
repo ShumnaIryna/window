@@ -14149,7 +14149,6 @@ const changeModalState = state => {
         switch (item.nodeName) {
           case 'SPAN':
             state[prop] = i;
-            //console.log('span');
             break;
           case 'INPUT':
             if (item.getAttribute('type') === 'checkbox') {
@@ -14160,16 +14159,12 @@ const changeModalState = state => {
                   box.checked = true;
                 }
               });
-              //console.log('checkbox');
             } else {
               state[prop] = item.value;
-              //console.log('input');
             }
-
             break;
           case 'SELECT':
             state[prop] = item.value;
-            //console.log('select');
             break;
         }
         console.log(state);
@@ -14389,7 +14384,7 @@ const modals = () => {
   binModal('.popup_calc_btn', '.popup_calc', '.popup_calc_close');
   binModal('.popup_calc_button', '.popup_calc_profile', '.popup_calc_profile_close', false);
   binModal('.popup_calc_profile_button', '.popup_calc_end', '.popup_calc_end_close', false);
-  // showModalByTime('.popup', 60000);
+  //showModalByTime('.popup', 6000);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (modals);
